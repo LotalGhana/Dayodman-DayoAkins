@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dayodman - Motivational Speaker</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff0000">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">DAYODMAN</h1>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="consultation.html">Consultation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Inspire. Motivate. Empower.</h2>
+    <p>Welcome to Dayodman's official website — Be inspired to live your purpose.</p>
+    <a href="consultation.html" class="btn">Book a Session</a>
+<button id="installBtn" class="btn install-btn" style="display:none;">Install App</button>
+  </section>
+<section class="videos-section">
+  <div class="container">
+    <h2>Featured Videos</h2>
+    <div class="video-grid">
+      <!-- Replace with your own video links -->
+      <div class="video-item">
+        <iframe width="100%" height="315" src="https://youtube.com/embed/ut_WIdxfE0Q?si=3ZV8SCjhmYGfenlu" 
+          title="Dayodman Video 1" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="video-item">
+        <iframe width="100%" height="315" src="https://youtube.com/embed/JXz5TKAtP88?si=jTWPv5794nBwUCPL" 
+          title="Dayodman Video 2" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="video-item">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/oMsDj6xZyRk?si=NWMEj7XhcTBjA5oI" 
+          title="Dayodman Video 3" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+ <div class="video-item">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/KJKkms8zNOo?si=AoClZX2q54XNkuCA" 
+          title="Dayodman Video 3" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Dayodman. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://youtube.com/@Dayodman" target="_blank" aria-label="YouTube">
+        <img src="assets/youtube.png" alt="YouTube">
+      </a>
+      <a href="https://instagram.com/Dayodman" target="_blank" aria-label="Instagram">
+        <img src="assets/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://facebook.com/DayodmanOfficial" target="_blank" aria-label="Facebook">
+        <img src="assets/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://tiktok.com/@Dayodman" target="_blank" aria-label="TikTok">
+        <img src="assets/tiktok.png" alt="TikTok">
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(reg => console.log('Service Worker registered.', reg));
+  }
+
+let deferredPrompt;
+  const installBtn = document.getElementById('installBtn');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.style.display = 'inline-block';
+  });
+
+  installBtn.addEventListener('click', async () => {
+    installBtn.style.display = 'none';
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      }
+      deferredPrompt = null;
+    }
+  });
+</script>
+</body>
+</html>

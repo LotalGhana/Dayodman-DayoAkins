@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consultation - Dayodman</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff0000">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">DAYODMAN</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="consultation.html" class="active">Consultation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>Book a Consultation</h2>
+      <p>
+        Ready to grow? Dayodman offers one-on-one sessions tailored to help you overcome challenges and stay motivated. Use the calendar below to book a time.
+      </p>
+
+      <div class="calendar-container">
+        <!-- Calendly inline widget begin -->
+        <div 
+          class="calendly-inline-widget" 
+          data-url="https://calendly.com/leaderulrichjr/new-meeting" 
+          style="min-width:320px;height:700px;">
+        </div>
+        <script 
+          type="text/javascript" 
+          src="https://assets.calendly.com/assets/external/widget.js" 
+          async>
+        </script>
+        <!-- Calendly inline widget end -->
+      </div>
+    </div>
+  </section>
+
+ <footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Dayodman. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://youtube.com/@Dayodman" target="_blank" aria-label="YouTube">
+        <img src="assets/youtube.png" alt="YouTube">
+      </a>
+      <a href="https://instagram.com/Dayodman" target="_blank" aria-label="Instagram">
+        <img src="assets/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://facebook.com/DayodmanOfficial" target="_blank" aria-label="Facebook">
+        <img src="assets/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://tiktok.com/@Dayodman" target="_blank" aria-label="TikTok">
+        <img src="assets/tiktok.png" alt="TikTok">
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(reg => console.log('Service Worker registered.', reg));
+  }
+</script>
+</body>
+</html>

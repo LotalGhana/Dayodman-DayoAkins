@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Dayodman</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ff0000">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">DAYODMAN</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="consultation.html">Consultation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content-section">
+    <div class="container">
+      <h2>Contact Dayodman</h2>
+      <p>If you have a question, want to collaborate, or just want to say hello, feel free to send a message below.</p>
+
+      <form action="https://formspree.io/f/xwpbaakq" method="POST" class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required placeholder="Your name">
+
+        <label for="email">Email</label>
+        <input type="email" name="_replyto" id="email" required placeholder="Your email">
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="6" required placeholder="Your message"></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+ <footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Dayodman. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://youtube.com/@Dayodman" target="_blank" aria-label="YouTube">
+        <img src="assets/youtube.png" alt="YouTube">
+      </a>
+      <a href="https://instagram.com/Dayodman" target="_blank" aria-label="Instagram">
+        <img src="assets/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://facebook.com/DayodmanOfficial" target="_blank" aria-label="Facebook">
+        <img src="assets/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://tiktok.com/@Dayodman" target="_blank" aria-label="TikTok">
+        <img src="assets/tiktok.png" alt="TikTok">
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(reg => console.log('Service Worker registered.', reg));
+  }
+</script>
+</body>
+</html>
