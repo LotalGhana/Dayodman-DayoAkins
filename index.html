@@ -113,6 +113,12 @@ let deferredPrompt;
       deferredPrompt = null;
     }
   });
+   const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('navLinks');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+  });
 </script>
 </body>
 </html>
