@@ -68,6 +68,12 @@
     navigator.serviceWorker.register('service-worker.js')
       .then(reg => console.log('Service Worker registered.', reg));
   }
+   const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('navLinks');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+  });
 </script>
 
 </body>
